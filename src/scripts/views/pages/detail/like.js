@@ -1,4 +1,4 @@
-const like = `
+export const like = `
     <button aria-label="tambahkan ke favorit" id="likeButton" class="like">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <g clip-path="url(#clip0_98_1301)">
@@ -14,7 +14,7 @@ const like = `
         </svg>
     </button>`;
 
-const liked = `
+export const liked = `
     <button aria-label="tambahkan ke favorit" id="likeButton" class="like">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
             <g clip-path="url(#clip0_98_1301)">
@@ -29,5 +29,3 @@ const liked = `
             </defs>
         </svg>
     </button>`;
-
-export { like, liked };

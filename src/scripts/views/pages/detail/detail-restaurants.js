@@ -1,6 +1,6 @@
-import CONFIG from '../../../globals/config.js';
+import CONFIG from '../../../globals/config';
 
-export const detailRestaurants = (restaurant) => {
+export default function detailRestaurants(restaurant) {
   const foods = restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('');
   const drinks = restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('');
   const reviews = restaurant.customerReviews.map((review) => `<section class="ulasan">
@@ -57,4 +57,4 @@ export const detailRestaurants = (restaurant) => {
   </header>
   ${reviews}
 </article>`;
-};
+}

@@ -34,10 +34,6 @@ h2 {
   font-size: 32px;
 }
 
-h3 {}
-
-h4 {}
-
 h5 {
   font-size: 18px;
 }
@@ -142,14 +138,6 @@ main .container header {
   border-radius: 8px;
   background: var(--flush-orange-500);
   padding: 0.5rem;
-}
-
-.nav-item {
-  color: var(--flush-orange-50);
-}
-
-.nav-item-scroll {
-  color: var(--flush-orange-950);
 }
 
 #hamburger {
@@ -547,6 +535,7 @@ footer p span {
     min-height: 44px;
     gap: 10px;
     text-decoration: none;
+    color: var(--flush-orange-50);
   }
 
   #desktop li .active {
@@ -599,6 +588,10 @@ footer p span {
     z-index: 2;
     border-radius: 0 0 50px 50px;
     box-shadow: 0px 18px 36px -18px rgba(0, 0, 0, 0.30), 0px 30px 60px -12px rgba(50, 50, 93, 0);
+  }
+
+  #desktop li a {
+    color: var(--flush-orange-950);
   }
 
   #desktop li .active {

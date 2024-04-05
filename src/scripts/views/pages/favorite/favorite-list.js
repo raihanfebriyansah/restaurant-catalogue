@@ -1,7 +1,7 @@
-import { potongDeskripsi } from './potongDeskripsi.js';
-import CONFIG from '../../../globals/config.js';
+import potongDeskripsi from '../home/cut-description';
+import CONFIG from '../../../globals/config';
 
-export const dataRestaurants = (restaurants) => `<article class="card" tabindex="0">
+const daftarFavorite = (restaurants) => `<article class="card" tabindex="0">
     <figure>
     <img src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="Gambar ${restaurants.name}">
       <figcaption>
@@ -15,3 +15,5 @@ export const dataRestaurants = (restaurants) => `<article class="card" tabindex=
       <a href="#/detail/${restaurants.id}">Lihat Detail</a>
     </div>
   </article>`;
+
+export default daftarFavorite;

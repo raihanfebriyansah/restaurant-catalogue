@@ -1,7 +1,7 @@
 import UrlParser from '../../../routes/url-parser';
 import RestaurantsResource from '../../../data/restaurant-resource';
 import FavoriteRestaurants from '../../../data/idb-favorite-restaurants';
-import { detailRestaurants } from './detailRestoran';
+import detailRestaurants from './detail-restaurants';
 import { like, liked } from './like';
 
 let likeButtonContainer;

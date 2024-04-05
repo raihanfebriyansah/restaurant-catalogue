@@ -1,5 +1,5 @@
 import RestaurantsResource from '../../../data/restaurant-resource';
-import { dataRestaurants } from './daftarRestoran';
+import restaurantLists from './restaurants-list';
 import '../../../components/Header';
 
 const home = {
@@ -40,7 +40,7 @@ const home = {
     const dataResto = await RestaurantsResource.listRestaurants();
     const container = document.querySelector('#daftar-restaurants');
     dataResto.forEach((restaurants) => {
-      container.innerHTML += dataRestaurants(restaurants);
+      container.innerHTML += restaurantLists(restaurants);
     });
   },
 };

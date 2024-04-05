@@ -8,10 +8,10 @@ class App {
     this.drawers = drawer;
     this.contents = content;
 
-    this._initialAppShell();
+    this.initialAppShell();
   }
 
-  _initialAppShell() {
+  initialAppShell() {
     DrawerInitiator.init({
       button: this.buttons,
       drawer: this.drawers,

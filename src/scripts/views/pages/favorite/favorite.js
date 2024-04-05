@@ -1,5 +1,5 @@
 import FavoriteRestaurants from '../../../data/idb-favorite-restaurants';
-import { daftarFavorite } from './daftarFavorite';
+import daftarFavorite from './favorite-list';
 
 const home = {
   async render() {
