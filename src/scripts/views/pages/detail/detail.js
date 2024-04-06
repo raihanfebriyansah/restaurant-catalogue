@@ -35,10 +35,12 @@ const Detail = {
     if (isFavorite) {
       await this.removeFavorite(restaurants.id);
       likeButtonContainer.innerHTML = like;
+      // eslint-disable-next-line no-console
       console.log('Restaurant removed from favorites.');
     } else {
       await this.saveFavorite(restaurants);
       likeButtonContainer.innerHTML = liked;
+      // eslint-disable-next-line no-console
       console.log('Restaurant added to favorites.');
     }
     if ('Notification' in window && Notification.permission === 'granted') {
