@@ -9,5 +9,12 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-restricted-globals": [
+            "error",
+            {
+                "name": "self",
+                "message": "Use dedicated variables instead of global objects like self."
+            }
+        ]
     }
 }
