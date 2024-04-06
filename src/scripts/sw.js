@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import 'regenerator-runtime';
 import CacheHelper from './utils/cache-helper';
 
@@ -13,7 +14,6 @@ const assetsToCache = [
   './icons/icon-384x384.png',
   './icons/icon-512x512.png',
   './views/templates/index.html',
-  './favicon.png',
   './app.bundle.js',
   './app.webmanifest',
   './sw.bundle.js',
