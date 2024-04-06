@@ -50,17 +50,10 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/list'),
+          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'restaurants-api',
-          },
-        },
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/small/{id}'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'restaurants-image-api',
           },
         },
       ],
