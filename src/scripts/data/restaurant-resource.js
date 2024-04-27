@@ -11,7 +11,18 @@ class RestaurantsResource {
   static async detailRestaurants(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     const responseJson = await response.json();
-    return responseJson.restaurant;
+
+    const restaurant = responseJson.restaurant || {};
+    if (!restaurant.menus) {
+      restaurant.menus = {
+        foods: [],
+        drinks: [],
+      };
+    }
+
+    console.log(restaurant);
+
+    return restaurant;
   }
 
   static async isRestaurantFavorite(id) {

@@ -34,12 +34,12 @@ const Detail = {
     const isFavorite = await RestaurantsResource.isRestaurantFavorite(restaurants.id);
     if (isFavorite) {
       await this.removeFavorite(restaurants.id);
-      likeButtonContainer.innerHTML = like;
+      // likeButtonContainer.innerHTML = like;
       // eslint-disable-next-line no-console
       console.log('Restaurant removed from favorites.');
     } else {
       await this.saveFavorite(restaurants);
-      likeButtonContainer.innerHTML = liked;
+      // likeButtonContainer.innerHTML = liked;
       // eslint-disable-next-line no-console
       console.log('Restaurant added to favorites.');
     }
