@@ -4,6 +4,8 @@ import './components/Navbar';
 import './components/Footer';
 import App from './views/app';
 import checkNotification from './utils/check-notification';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
   button: document.querySelector('#hamburger'),
