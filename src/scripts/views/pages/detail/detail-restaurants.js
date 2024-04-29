@@ -47,7 +47,11 @@ export default function detailRestaurants(restaurant) {
         <div class="button_fav" id="likeContainer">
         </div>
       </div>
-      <img src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" width="100%" alt="Gambar ${restaurant.name}">
+      <picture>
+        <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}">
+        <img src='${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}' width="100%"
+             alt="${restaurant.name}">
+      </picture>
     </div>
   </section>
 </article>
