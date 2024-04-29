@@ -19,9 +19,6 @@ class RestaurantsResource {
         drinks: [],
       };
     }
-
-    console.log(restaurant);
-
     return restaurant;
   }
 

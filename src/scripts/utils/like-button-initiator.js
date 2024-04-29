@@ -1,4 +1,5 @@
-import FavoriteRestaurants from "../data/idb-favorite-restaurants";
+/* eslint-disable no-underscore-dangle */
+import FavoriteRestaurants from '../data/idb-favorite-restaurants';
 
 const LikeButtonInitiator = {
   async init({ likeButtonContainer, restaurant }) {
@@ -40,8 +41,8 @@ const LikeButtonInitiator = {
           </svg>
       </button>`;
 
-    const likeButton = document.querySelector("#likeButton");
-    likeButton.addEventListener("click", async () => {
+    const likeButton = document.querySelector('#likeButton');
+    likeButton.addEventListener('click', async () => {
       await this._favoriteRestaurants.putRestaurants(this._restaurant);
       this._renderButton();
     });
@@ -64,8 +65,8 @@ const LikeButtonInitiator = {
           </svg>
       </button>`;
 
-    const likeButton = document.querySelector("#likeButton");
-    likeButton.addEventListener("click", async () => {
+    const likeButton = document.querySelector('#likeButton');
+    likeButton.addEventListener('click', async () => {
       await this._favoriteRestaurants.deleteRestaurants(this._restaurant.id);
       this._renderButton();
     });

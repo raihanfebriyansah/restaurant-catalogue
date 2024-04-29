@@ -237,7 +237,16 @@ main .container h5 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image:
+    -webkit-image-set(url('../public/images/heros/hero-image_2_small.jpg') 1x,
+      url('../public/images/heros/hero-image_2.jpg') 2x,
+    );
+  background-image:
+    image-set(url('../public/images/heros/hero-image_2_small.jpg') 1x,
+      url('../public/images/heros/hero-image_2.jpg') 2x,
+    );
 }
+
 
 .header figure figcaption {
   height: 100%;
