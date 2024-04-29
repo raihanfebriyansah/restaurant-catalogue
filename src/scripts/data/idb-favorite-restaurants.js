@@ -15,7 +15,10 @@ const FavoriteRestaurants = {
       return;
     }
 
-    await (await dbPromise).get(OBJECT_STORE_NAME, id);
+    return (await dbPromise).get(OBJECT_STORE_NAME, id);
+  },
+  async getAllRestaurants() {
+    return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putRestaurants(restaurant) {
     if (!Object.prototype.hasOwnProperty.call(restaurant, 'id')) {
