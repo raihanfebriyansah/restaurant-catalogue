@@ -6,7 +6,6 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  mode: 'production',
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
     // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
