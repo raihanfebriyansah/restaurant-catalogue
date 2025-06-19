@@ -10,7 +10,9 @@ dist
 jest.config.js
 codecept.conf.js
 babel.config.json
-webpack.*.js
+webpack.dev.js
+webpack.common.js
+webpack.prod.js
 sharp.js
 steps_file.js
 .eslintrc.json
