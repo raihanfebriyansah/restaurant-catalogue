@@ -1,0 +1,16 @@
+node_modules
+src
+tests
+e2e
+dist
+.git
+.github
+*.log
+*.md
+jest.config.js
+codecept.conf.js
+babel.config.json
+webpack.*.js
+sharp.js
+steps_file.js
+.eslintrc.json

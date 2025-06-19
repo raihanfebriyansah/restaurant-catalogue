@@ -4,6 +4,7 @@ node_modules/
 # Ignore built files
 dist/
 build/
+public/
 *.bundle.js
 
 # Ignore log files and other generated files

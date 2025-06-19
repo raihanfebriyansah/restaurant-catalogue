@@ -1,16 +1,16 @@
 {
   "name": "restaurant-apps",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
+  "main": "index.js",  "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "build-image": "node sharp.js",
-    "serve": "http-server dist",
+    "serve": "http-server public",
     "clear-cache": "rimraf node_modules/.cache",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "vercel-build": "npm run build"
   },
   "keywords": [],
   "author": "Raihan Febriyansah <raihanfebriyansahh@gmail.com>",
