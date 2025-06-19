@@ -10,9 +10,9 @@
     "clear-cache": "rimraf node_modules/.cache",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "e2e": "codeceptjs run --steps",
-    "vercel-build": "npx webpack --config webpack.prod.js --mode production",
-    "build:vercel": "npm run build"
+    "e2e": "codeceptjs run --steps",    "vercel-build": "webpack --mode=production",
+    "build:prod": "webpack --config webpack.prod.js",
+    "build:simple": "webpack"
   },
   "keywords": [],
   "author": "Raihan Febriyansah <raihanfebriyansahh@gmail.com>",
