@@ -7,10 +7,12 @@
     "serve": "http-server public",
     "clear-cache": "rimraf node_modules/.cache",
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "e2e": "codeceptjs run --steps",    "vercel-build": "npx webpack --config webpack.config.js --mode production",
+    "test:watch": "jest --watchAll",    "e2e": "codeceptjs run --steps",
+    "vercel-build": "npx webpack --config webpack.config.js --mode production",
     "vercel-build-fallback": "node build-script.js",
-    "vercel-build-simple": "npx webpack --entry ./src/scripts/index.js --output-path ./public --output-filename bundle.js --mode production"
+    "vercel-build-simple": "npx webpack --entry ./src/scripts/index.js --output-path ./public --output-filename bundle.js --mode production",
+    "validate-build": "node validate-build.js",
+    "pre-deploy": "npm run validate-build && npm run vercel-build"
   },
   "keywords": [],
   "author": "Raihan Febriyansah <raihanfebriyansahh@gmail.com>",
