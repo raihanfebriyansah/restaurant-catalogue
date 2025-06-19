@@ -1,12 +1,15 @@
+// Simple webpack config specifically for Vercel deployment
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/scripts/index.js',  output: {
-    filename: '[name].[contenthash].js',
+  entry: {
+    main: './src/scripts/index.js'
+  },
+  output: {
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
     clean: true,
   },
@@ -28,29 +31,6 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      minSize: 20000,
-      maxSize: 70000,
-      minChunks: 1,
-      maxAsyncRequests: 30,
-      maxInitialRequests: 30,
-      automaticNameDelimiter: '~',
-      enforceSizeThreshold: 50000,
-      cacheGroups: {
-        defaultVendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -61,18 +41,6 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'public/'),
-        },
-      ],
-    }),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'restaurants-api',
-          },
         },
       ],
     }),

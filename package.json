@@ -11,8 +11,10 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "e2e": "codeceptjs run --steps",    "vercel-build": "webpack --mode=production",
+    "vercel-build-fallback": "webpack --config webpack.vercel.simple.js",
     "build:prod": "webpack --config webpack.prod.js",
-    "build:simple": "webpack"
+    "build:simple": "webpack",
+    "build:direct": "webpack --entry ./src/scripts/index.js --output-path ./public --output-filename bundle.js --mode production"
   },
   "keywords": [],
   "author": "Raihan Febriyansah <raihanfebriyansahh@gmail.com>",
